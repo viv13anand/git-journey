@@ -119,3 +119,52 @@ working directory yet. To actually
 update your working directory and see
 those changes in your files, you need to
 run git pull.
+
+push means
+sending local changes to the remote.
+
+Fetch means bringing remote changes into
+your local repository but not merging
+them yet.  
+
+pull means fetching plus
+merging. pull = fetch + merge.
+
+The revert command is used to undo the
+changes made in a previous commit. But
+instead of deleting that old commit, it
+creates a new one that reverses those
+changes.
+It cancels out
+the effects of a previous commit while
+keeping the project history completely
+clean and traceable.
+
+When you perform a rebase,
+the base of your feature branch changes.
+That means if you rebase onto main, all
+the new commits from main will be applied
+directly into your feature branch. 
+All your feature branch commits will be
+reapplied on top of them.
+However,
+even though git rebase is very powerful,
+it's not recommended to use it on public
+repositories or branches where multiple
+developers are working together. 
+If you
+must use it, you should always inform
+your team beforehand. Otherwise, it can
+cause serious issues. 
+The reason is that
+rebase rewrites existing commit history.
+even the comet ids change. So if someone
+else is working on the same branch, your
+rebased commits won't match their local
+copies anymore and they won't be able to
+pull or sync normally. Therefore, before
+using rebase, make sure you fully
+understand where you are applying it and
+whether it could cause problems for your
+collaborators.
+
