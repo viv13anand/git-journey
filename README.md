@@ -1,3 +1,5 @@
+https://www.youtube.com/watch?v=mAFoROnOfHs
+
 Git is a powerful tool that
 constantly keep track of every change
 you make to your files, aka local.
