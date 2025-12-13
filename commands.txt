@@ -1,2 +1,61 @@
-git --version
+cd - change directory.
+mkdir - make directory.
+touch - create a new, empty file.
+cd .. - move to parent directory.
+open . - opens  directory in finder.
+
+git --version -> check git version.
+
+git init -> initialise a new repo.
+
+ls -> lists files & folder in the directory.
+
+ls la / ls -a -> lists all files and folders, including hidden ones in the directory.
+
+git clone https -> clone remote repo onto the local.
+
+git status -> modified 
+
+git add --all / git add -A -> tracks every change across the project and prepare it for next commit.
+
+git add . -> tracks changes in the current directory and everything inside it and prepare it for next commit.
+
+git add * -> = stages all visible changes, except for the deleted.
+
+git add file-name -> stages only the specific file.
+
+git add *.extension-name. -> stages files of the specificed extension only.
+
+git reset -> removes tracked changes from staging, unstage and revert to working directory.
+
+git commit -m "message" -> commit the staged changes to local repo.
+
+git config --global user.email "emaild-id" 
+git config --global user.name "username"
+
+git reset HEAD~ -> undo the last commit.
+
+git rm filename -> delete a file and stage that deletion.
+
+git rm -f filename -> force delete a file and stage that deletion.
+
+git rm --cached filename -> removes file from staging area, but keeps it in the working directory.
+
+git rm folder -> folder and its immediate contents will be removed.
+
+git rm -r folder -> folder and all its recursive contents will be removed.
+
+git reset --hard -> resets the changes including the deleted files and revert to working directory.
+
+git log -> view commits.
+
+git log --oneline -> short summary of each commit.
+
+git branch -> list of all the branches.
+
+git branch branch-name -> create a new branch.
+
+git checkout branch-name -> switch to a new branch.
+
+git merge branch-name -m "message" -> merges the specified branch into the current branch.
 
