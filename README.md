@@ -103,3 +103,19 @@ it manually by deciding which changes to
 keep or by merging both versions
 yourself.
 
+When we send
+local changes to a remote repository,
+that process is called a push.   
+
+If any changes have been made in the remote
+repository that we want to bring into a
+local repository, we use fetch.
+
+When you
+run git fetch, the remote changes are
+downloaded into your local repositories
+memory, but they won't appear in your
+working directory yet. To actually
+update your working directory and see
+those changes in your files, you need to
+run git pull.
