@@ -1,0 +1,346 @@
+vivekanand@MacBookAir myFoler % touch three.txt
+vivekanand@MacBookAir myFoler % cd..
+zsh: command not found: cd..
+vivekanand@MacBookAir myFoler % cd ..
+vivekanand@MacBookAir git-one % open .
+vivekanand@MacBookAir git-one % git init
+Initialized empty Git repository in /Users/vivekanand/Documents/git-one/.git/
+vivekanand@MacBookAir git-one % ls
+myFolder	one.txt		two.txt
+vivekanand@MacBookAir git-one % ls -la
+total 40
+drwxr-xr-x@ 7 vivekanand  staff   224 12 Dec 18:39 .
+drwx------@ 8 vivekanand  staff   256 12 Dec 18:36 ..
+-rw-r--r--@ 1 vivekanand  staff  8196 12 Dec 18:37 .DS_Store
+drwxr-xr-x  9 vivekanand  staff   288 12 Dec 18:39 .git
+drwxr-xr-x  3 vivekanand  staff    96 12 Dec 18:38 myFolder
+-rw-r--r--@ 1 vivekanand  staff     3 12 Dec 18:38 one.txt
+-rw-r--r--@ 1 vivekanand  staff     3 12 Dec 18:38 two.txt
+vivekanand@MacBookAir git-one % cd ../
+vivekanand@MacBookAir Documents % git clone https://github.com/viv13anand/git-journey.git
+Cloning into 'git-journey'...
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (9/9), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 9 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (9/9), done.
+vivekanand@MacBookAir Documents % ls
+git-journey	git-one
+vivekanand@MacBookAir Documents % clear
+
+vivekanand@MacBookAir Documents % cd git-journey
+vivekanand@MacBookAir git-journey % ls
+one.txt	two.txt
+vivekanand@MacBookAir git-journey % ls -la
+total 16
+drwxr-xr-x   5 vivekanand  staff  160 12 Dec 18:48 .
+drwx------@  9 vivekanand  staff  288 12 Dec 18:48 ..
+drwxr-xr-x  12 vivekanand  staff  384 12 Dec 18:48 .git
+-rw-r--r--   1 vivekanand  staff    4 12 Dec 18:48 one.txt
+-rw-r--r--   1 vivekanand  staff    4 12 Dec 18:48 two.txt
+vivekanand@MacBookAir git-journey % ls -a
+.	..	.git	one.txt	two.txt
+vivekanand@MacBookAir git-journey % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   one.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+vivekanand@MacBookAir git-journey % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   one.txt
+	modified:   two.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+vivekanand@MacBookAir git-journey % mkdir myFoler
+vivekanand@MacBookAir git-journey % cd myFolder
+vivekanand@MacBookAir myFolder % touch three.txt
+vivekanand@MacBookAir myFolder % cd ..     
+vivekanand@MacBookAir git-journey % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   one.txt
+	modified:   two.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	myFolder/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+vivekanand@MacBookAir git-journey % git add --all
+vivekanand@MacBookAir git-journey % git status   
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   .DS_Store
+	new file:   myFolder/three.txt
+	modified:   one.txt
+	modified:   two.txt
+
+vivekanand@MacBookAir git-journey % git reset
+Unstaged changes after reset:
+M	one.txt
+M	two.txt
+vivekanand@MacBookAir git-journey % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   one.txt
+	modified:   two.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	myFolder/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+vivekanand@MacBookAir git-journey % git add -A
+vivekanand@MacBookAir git-journey % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   .DS_Store
+	new file:   myFolder/three.txt
+	modified:   one.txt
+	modified:   two.txt
+
+vivekanand@MacBookAir git-journey % git reset 
+Unstaged changes after reset:
+M	one.txt
+M	two.txt
+vivekanand@MacBookAir git-journey % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   one.txt
+	modified:   two.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	myFolder/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+vivekanand@MacBookAir git-journey % git add .
+vivekanand@MacBookAir git-journey % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   .DS_Store
+	new file:   myFolder/three.txt
+	modified:   one.txt
+	modified:   two.txt
+
+vivekanand@MacBookAir git-journey % cd ..     
+vivekanand@MacBookAir Documents % cd git-journey
+vivekanand@MacBookAir git-journey % cd myFolder
+vivekanand@MacBookAir myFolder % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   ../.DS_Store
+	new file:   three.txt
+	modified:   ../one.txt
+	modified:   ../two.txt
+
+vivekanand@MacBookAir myFolder % git add .     
+vivekanand@MacBookAir myFolder % git status 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   ../.DS_Store
+	new file:   three.txt
+	modified:   ../one.txt
+	modified:   ../two.txt
+
+vivekanand@MacBookAir myFolder % cd ..
+vivekanand@MacBookAir git-journey % git add -A
+vivekanand@MacBookAir git-journey % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   .DS_Store
+	new file:   myFolder/three.txt
+	modified:   one.txt
+	modified:   two.txt
+
+vivekanand@MacBookAir git-journey % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   .DS_Store
+	new file:   myFolder/three.txt
+	modified:   one.txt
+	modified:   two.txt
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    two.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	four.txt
+
+vivekanand@MacBookAir git-journey % git add *
+vivekanand@MacBookAir git-journey % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   .DS_Store
+	new file:   four.txt
+	new file:   myFolder/three.txt
+	modified:   one.txt
+	modified:   two.txt
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    two.txt
+
+vivekanand@MacBookAir git-journey % git reset
+Unstaged changes after reset:
+M	one.txt
+D	two.txt
+vivekanand@MacBookAir git-journey % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   one.txt
+	deleted:    two.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	four.txt
+	myFolder/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+vivekanand@MacBookAir git-journey % git add two.txt
+vivekanand@MacBookAir git-journey % git status     
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	deleted:    two.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   one.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	four.txt
+	myFolder/
+
+vivekanand@MacBookAir git-journey % git reset      
+Unstaged changes after reset:
+M	one.txt
+D	two.txt
+vivekanand@MacBookAir git-journey % git add .
+vivekanand@MacBookAir git-journey % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   .DS_Store
+	new file:   four.txt
+	new file:   myFolder/three.txt
+	modified:   one.txt
+	deleted:    two.txt
+
+vivekanand@MacBookAir git-journey % git commit -m "I have made some changes to files"
+[main 31c91d5] I have made some changes to files
+ Committer: Vivek Anand <vivekanand@MacBookAir.dlink>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 5 files changed, 3 insertions(+), 1 deletion(-)
+ create mode 100644 .DS_Store
+ create mode 100644 four.txt
+ create mode 100644 myFolder/three.txt
+ delete mode 100644 two.txt
+vivekanand@MacBookAir git-journey % git config --global --edit
+hint: Waiting for your editor to close the file... 
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+#       name = Vivek Anand
+#       email = vivekanand@MacBookAir.dlink
+~                                                                                                                       
+~                                                                                                                       
+~                                                                                                                       
+~                                                                                                                       
+~                                                                                                                       
+~                                                                                                                       
+~                                                                                                                       
+~                                                                                                                       
+~                                                                                                                       
+~                                                                                                                       
+~                                                                                                                       
+~                                                                                                                       
+~                                                                                                                       
+~                                                                                                                       
+~                                                                                                                       
+~                                                                                                                       
+~                                                                                                                       
+~                                                                                                                       
+~                                                                                                                       
+~                                                                                                                       
+~                                                                                                                       
+~                                                                                                                       
+~                                                                                                                       
+~                                                                                                                       
+"~/.gitconfig" 5L, 161B                                                                                         
