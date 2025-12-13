@@ -92,3 +92,11 @@ git stash list -> shows the list of saved stashes.
 git stash pop stash@{n} -> pops a specified stash item, where n is finite.
 
 git stash apply stash@{n} -> applies a speciifed stash item, where n is finite.
+
+git stash drop -> drops the applied stash item(s).
+
+git revert commit-id -> undo the changes from the commit.
+note: Type a commit message or exit by typing :wq
+
+git rebase main -> aligns the current branch on top of extra commits in the main.
+
