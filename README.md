@@ -61,3 +61,43 @@ our local working directory. Once we are
 done, we stage our changes and then
 commit those staged files to the local
 repository.
+
+The process of moving changes from the
+working directory to the staging area is
+called adding.
+
+---
+
+A branch in Git is like a
+separate line of development where you
+can work independently.
+
+The default branch is
+called main.
+The main branch is your
+project's central line of development.
+
+Instead of
+making changes directly on the main
+branch, you create a separate
+development branch where you test and
+commit all your changes. 
+
+Once everything
+is stable and verified, you merge that
+branch back into the main branch.
+
+Merge
+simply means combining the changes from
+two branches into one.
+
+A merge conflict
+happens when the same part of the same
+file has been changed differently in two
+branches.
+Git flags the file as having
+a conflict and you will have to resolve
+it manually by deciding which changes to
+keep or by merging both versions
+yourself.
+
