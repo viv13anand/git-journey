@@ -170,3 +170,20 @@ understand where you are applying it and
 whether it could cause problems for your
 collaborators.
 
+A pull request is
+essentially a request you make to merge
+your changes into another branch,
+usually the main branch. 
+It's a way of
+saying, I have made some changes in my
+branch. Please review them, and if
+everything looks good, merge them into
+the main branch. 
+In other words, you
+can't directly make changes to someone
+else's repository. 
+So when you finish
+your work in your own branch, you create
+a pull request to ask for permission to
+merge your code into the main
+repository.
