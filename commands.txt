@@ -59,3 +59,36 @@ git checkout branch-name -> switch to a new branch.
 
 git merge branch-name -m "message" -> merges the specified branch into the current branch.
 
+git checkout commit-id -> switch to the specified commit.
+
+git diff commit-id1 commit-id2 -> difference between two different commit id's.
+
+git push origin main -> commits will be sent to the remote main branch.
+
+git fetch -> fetches the updated changes from remote to local.
+
+git merge -> the fetched changes will be merged to the local.
+
+git pull -> performs both fetch and merge processes from remote to local.
+
+git restore file-name -> reverts the file to previous commited state.
+
+git restore directory-name -> reverts the entire directory to its previous commited state.
+
+git restore . -> reverts the entire repo.
+
+git restore --staged filename -> removes the file from staging, reverts back to the working directory's state.
+
+git restore --staged . -> removes all the files from staging, reverts back to the working directory's state.
+
+git stash -> saves uncommited branch work in a temporary stash.
+
+git stash pop -> stashed uncommited work reappears on the branch.
+
+git stash apply -> stashed uncommited work reappears on the branch, while the stashed list remains unchanged.
+
+git stash list -> shows the list of saved stashes.
+
+git stash pop stash@{n} -> pops a specified stash item, where n is finite.
+
+git stash apply stash@{n} -> applies a speciifed stash item, where n is finite.
