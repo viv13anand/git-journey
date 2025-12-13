@@ -24,6 +24,8 @@ your code, a secure place where Git
 neatly stores every record of your work
 and every change you have ever made.
 
+---
+
 --- how the local part works ---
 
 In your computer, the folder where you are
