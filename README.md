@@ -1,5 +1,7 @@
 https://www.youtube.com/watch?v=mAFoROnOfHs
 
+---
+
 Git is a powerful tool that
 constantly keep track of every change
 you make to your files, aka local.
@@ -10,12 +12,16 @@ project lives, making it easy for
 everyone to see, edit, and share updates
 in one single place, aka remote.
 
+---
+
 a repository is a place where all
 the versions of your files and their
 complete change history are stored. 
+
 In
 the case of a local repository, it's a
 specific folder on your own computer.
+
 For a 
 remote repository, it lives on a
 cloud server like GitHub. 
@@ -33,14 +39,18 @@ and every change you have ever made.
 In your computer, the folder where you are
 working on your project is called the
 working directory. 
+
 This is where all the
 action happens. You write code, create
 new files, modify existing ones, and
 make changes as needed. 
+
 And when you
 feel all right, this version looks good
 and want to save this change. That's when
 you move on to the next stage in git workflow.
+
+---
 
 Staging
 process is the second phase in Git's
@@ -53,6 +63,8 @@ Once
 you have reviewed everything and you are
 confident the work is correct, you
 commit it.
+
+---
 
 Committing means permanently
 saving those changes to your local
@@ -95,6 +107,8 @@ Merge
 simply means combining the changes from
 two branches into one.
 
+---
+
 A merge conflict
 happens when the same part of the same
 file has been changed differently in two
@@ -104,6 +118,8 @@ a conflict and you will have to resolve
 it manually by deciding which changes to
 keep or by merging both versions
 yourself.
+
+---
 
 When we send
 local changes to a remote repository,
@@ -117,7 +133,9 @@ When you
 run git fetch, the remote changes are
 downloaded into your local repositories
 memory, but they won't appear in your
-working directory yet. To actually
+working directory yet. 
+
+To actually
 update your working directory and see
 those changes in your files, you need to
 run git pull.
@@ -132,15 +150,20 @@ them yet.
 pull means fetching plus
 merging. pull = fetch + merge.
 
+---
+
 The revert command is used to undo the
 changes made in a previous commit. But
 instead of deleting that old commit, it
 creates a new one that reverses those
 changes.
+
 It cancels out
 the effects of a previous commit while
 keeping the project history completely
 clean and traceable.
+
+---
 
 When you perform a rebase,
 the base of your feature branch changes.
@@ -149,36 +172,45 @@ the new commits from main will be applied
 directly into your feature branch. 
 All your feature branch commits will be
 reapplied on top of them.
+
 However,
 even though git rebase is very powerful,
 it's not recommended to use it on public
 repositories or branches where multiple
 developers are working together. 
+
 If you
 must use it, you should always inform
 your team beforehand. Otherwise, it can
 cause serious issues. 
+
 The reason is that
 rebase rewrites existing commit history.
 even the comet ids change. So if someone
 else is working on the same branch, your
 rebased commits won't match their local
 copies anymore and they won't be able to
-pull or sync normally. Therefore, before
+pull or sync normally. 
+
+Therefore, before
 using rebase, make sure you fully
 understand where you are applying it and
 whether it could cause problems for your
 collaborators.
 
+---
+
 A pull request is
 essentially a request you make to merge
 your changes into another branch,
 usually the main branch. 
+
 It's a way of
 saying, I have made some changes in my
 branch. Please review them, and if
 everything looks good, merge them into
 the main branch. 
+
 In other words, you
 can't directly make changes to someone
 else's repository. 
